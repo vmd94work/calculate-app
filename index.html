@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Calculate-App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="col s12 m6 calc__table">
+        <div class="card blue-grey darken-1">
+          <div class="card-content white-text">
+            <h1 class="calc__title">Calculate-App</h1>
+            <div class="row">
+              <div class="input-field col s6">
+                <input
+                  placeholder="Вводить сюда"
+                  id="num1"
+                  type="text"
+                  class="validate"
+                />
+                <label class="active" 
+                  >Введите первое значение</label
+                >
+              </div>
+              <div class="input-field col s6">
+                <input
+                  placeholder="Вводить сюда"
+                  id="num2"
+                  type="text"
+                  class="validate"
+                />
+                <label class="active" 
+                  >Введите второе значение</label
+                >
+              </div>
+            </div>
+            <div class="control__block">
+              <div class="control__block-selector">
+                <select class="browser-default" id="operator">
+                  <option value="addition">+</option>
+                  <option value="subtraction">-</option>
+                  <option value="multiplication">&times;</option>
+                  <option value="division">&divide;</option>
+                </select>
+              </div>
+              <div class="control__btns">
+               <a class="waves-effect waves-light btn" onclick="calculate()">Результат</a>
+               <a class="waves-effect waves-light btn" onclick="reset()">Сброс</a>
+              </div>
+             
+              <div class="input-field col s6">
+               <input
+               readonly
+                 placeholder="Ваш ответ"
+                 id="result"
+                 type="text"
+                 name="textview"
+                 class="validate"
+               />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>
